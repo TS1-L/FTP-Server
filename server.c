@@ -1,4 +1,3 @@
-// server.c
 #include "commands.h"
 
 User users[MAX_USERS] = {
@@ -37,7 +36,7 @@ void handle_client(int client_socket) {
     char buffer[BUFFER_SIZE];
     char username[50];
 
-    // Authenticate user
+    // authentication for user
     recv(client_socket, buffer, sizeof(buffer), 0);
     strncpy(username, buffer, sizeof(username));
     
